@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>ImmutableRelations.netcore20</PackageId>
+    <Authors>Christian Köllner</Authors>
+    <Description>Immutable n-ary relation data structure for .NET Core</Description>
+    <AssemblyVersion>0.5.0.0</AssemblyVersion>
+    <FileVersion>0.5.0.0</FileVersion>
+    <Version>0.5.0</Version>
+    <Copyright>Christian Köllner</Copyright>
+    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/c80k/immutablerelations</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/c80k/immutablerelations</RepositoryUrl>
+    <PackageTags>immutable data structure binary ternary relation</PackageTags>
+    <Company />
+    <Product>ImmutableRelations</Product>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <LangVersion>7.2</LangVersion>
+    <DocumentationFile>bin\Release\netcoreapp2.0\ImmutableRelations.netcore20.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <LangVersion>7.2</LangVersion>
+    <DocumentationFile>bin\Debug\netcoreapp2.0\ImmutableRelations.netcore20.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\ImmutableRelations\C80k\Collections\Immutable\ImmutableRelation.cs" Link="C80k\Collections\Immutable\ImmutableRelation.cs" />
+    <Compile Include="..\ImmutableRelations\C80k\Collections\Immutable\ImmutableRelations.cs" Link="C80k\Collections\Immutable\ImmutableRelations.cs" />
+    <Compile Include="..\ImmutableRelations\C80k\Collections\Immutable\ItemMatcher.cs" Link="C80k\Collections\Immutable\ItemMatcher.cs" />
+    <Compile Include="..\ImmutableRelations\C80k\Collections\Immutable\ITupleAdapter.cs" Link="C80k\Collections\Immutable\ITupleAdapter.cs" />
+    <Compile Include="..\ImmutableRelations\C80k\Collections\Immutable\TupleProjector1.cs" Link="C80k\Collections\Immutable\TupleProjector1.cs" />
+    <Compile Include="..\ImmutableRelations\C80k\Collections\Immutable\TupleProjector2.cs" Link="C80k\Collections\Immutable\TupleProjector2.cs" />
+    <Compile Include="..\ImmutableRelations\C80k\Collections\Immutable\TupleProjector3.cs" Link="C80k\Collections\Immutable\TupleProjector3.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="C80k\Collections\Immutable\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ValueTuple" Version="4.4.0" />
+  </ItemGroup>
+
+</Project>
